@@ -1,0 +1,26 @@
+pytz==2021.3  # https://github.com/stub42/pytz
+python-slugify==5.0.2  # https://github.com/un33k/python-slugify
+whitenoise==5.3.0  # https://github.com/evansd/whitenoise
+redis==4.1.0  # https://github.com/redis/redis-py
+celery==5.2.3  # pyup: < 6.0  # https://github.com/celery/celery
+django-celery-beat==2.2.1  # https://github.com/celery/django-celery-beat
+flower==1.0.0  # https://github.com/mher/flower
+
+# Request Library
+# ------------------------------------------------------------------------------
+requests==2.26.0 # https://github.com/psf/requests
+aiohttp==3.8.1 # https://docs.aiohttp.org/en/stable/
+
+# Django
+# ------------------------------------------------------------------------------
+django==3.2.10  # pyup: < 4.0  # https://www.djangoproject.com/
+django-environ==0.8.1  # https://github.com/joke2k/django-environ
+django-allauth==0.47.0  # https://github.com/pennersr/django-allauth
+django-crispy-forms==1.13.0  # https://github.com/django-crispy-forms/django-crispy-forms
+crispy-bootstrap5==0.6  # https://github.com/django-crispy-forms/crispy-bootstrap5
+django-redis==5.2.0  # https://github.com/jazzband/django-redis
+django-filter==21.1 # https://github.com/carltongibson/django-filter
+
+# Django REST Framework
+djangorestframework==3.13.1  # https://github.com/encode/django-rest-framework
+django-cors-headers==3.10.1 # https://github.com/adamchainz/django-cors-headers

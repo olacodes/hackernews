@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Hacker News</h1>
+<h1>{{time}}</h1>
+<p>{{count}}</p>
+{% for news in data%}
+<h2>
+  {{news.title}} &RightTeeArrow;
+  <span style="font-size: 14px">by {{news.by}}</span>
+</h2>
+
+<!-- <blockquote>{{news.text | safe}}</blockquote>  -->
+<p>total comment:{{news.descendants}}</p>
+<p>point: {{news.score}}</p>
+{%endfor%} {% endblock content %}
