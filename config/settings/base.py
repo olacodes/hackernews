@@ -281,7 +281,7 @@ CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
 CELERY_BEAT_SCHEDULE = {
     "scheduled_task": {
         "task": "news.tasks.sync_hknews_sync",
-        "schedule": 60.0 * 25,
+        "schedule": 60.0 * 5,
     }
 }
 

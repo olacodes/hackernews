@@ -29,7 +29,7 @@ Hackernews clone that sync with the hackernews website
 - Run `docker-compose -f local.yml build`
 
   - Running the above command for the first time will download all docker-images and third party packages needed for the app.
-  - **NB: This may take up to 10 - 15 minutes**
+  - **NB: This will take several minutes for the first built, others will be in a blink of an eye**
 
 - Run `docker-compose -f local.yml up`
 
@@ -70,7 +70,7 @@ You can explore the Hackernews App by going to `http://localhost:8000/api` on yo
 3. GET Filtered news by type
    1. For story --> http://localhost:8000/api/news/?type=story
    2. For poll --> http://localhost:8000/api/news/?type=poll
-   3. For story --> http://localhost:8000/api/news/?type=story
+   3. For job --> http://localhost:8000/api/news/?type=job
 4. POST News --> `http://localhost:8000/api`
 5. PUT News --> `http://localhost:8000/api` if only created by user
 6. DELETE News --> `http://localhost:8000/api` if only created by user
