@@ -1,0 +1,29 @@
+{% load timestamp_to_time %} {% for news in news%}
+<div class="card my-5">
+  <div class="card-header d-flex justify-content-between align-center pb-0">
+    <p class="lead">{{news.type | title}}</p>
+    <p class="text-end lead">{{news.time |timestamp_to_time|date:"D d M Y"}}</p>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{news.title}}</h5>
+    <p class="card-text mb-2">{{news.text | truncatechars:100 | safe }}</p>
+    <p>
+      <small class="text-muted">
+        Comments: {{news.descendants}} Point: {{news.score}}
+      </small>
+    </p>
+    <blockquote class="blockquote mb-0 align-center">
+      <a
+        class="btn btn-outline-secondary"
+        href="{% url 'news-detail' news.id %}"
+      >
+        Read More
+      </a>
+      <footer class="blockquote-footer text-end">
+        By: <cite title="Source Title">{{news.by}}</cite>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+
+{%endfor%}

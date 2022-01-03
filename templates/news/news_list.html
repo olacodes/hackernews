@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block content %} {% load timestamp_to_time %}
+
+<div class="d-flex justify-content-between mt-5">
+  <h1 class="align-items-center">Hacker News</h1>
+  <form method="get">
+    <div class="d-flex">
+      <button
+        type="submit"
+        name="f"
+        value="story"
+        class="btn btn-sm btn-outline-secondary"
+      >
+        Story
+      </button>
+      <button
+        type="submit"
+        name="f"
+        value="job"
+        class="btn btn-sm btn-outline-secondary mx-2"
+      >
+        Job
+      </button>
+      <button
+        type="submit"
+        name="f"
+        value="poll"
+        class="btn btn-sm btn-outline-secondary"
+      >
+        Poll
+      </button>
+    </div>
+  </form>
+</div>
+
+<div id="news">{% include 'news/news_index.html' %}</div>
+
+<div>
+  <a id="lazyLoadLink" href="javascript:void(0);" data-page="2">Load More</a>
+</div>
+{% endblock content %}

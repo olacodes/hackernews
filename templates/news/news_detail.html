@@ -1,0 +1,35 @@
+{% extends "base.html" %}{% load timestamp_to_time %} {%block content %}
+<div class="mt-5 mb-3">
+  <a
+    class="text-warning text-uppercase text-decoration-none fw-bold"
+    href="{{news.url}}"
+    >&gt; Read Full Story</a
+  >
+</div>
+<h3 class="display-6 text-capitalize fw-bold">{{news.title}}</h3>
+<p>Published on {{news.time |timestamp_to_time|date:"D d M Y"}}</p>
+<p>By: <cite title="Source Title">{{news.by}}</cite></p>
+<hr style="padding: 2px" />
+<h2 class="display-6 fw-bold text-center">Comments</h2>
+{% load static %} {% for comment in comments%}
+<div class="d-flex ">
+  <div class="avatar me-4 mt-2">
+    <img
+      style="
+        width: 50px;
+        height: 50px;
+        vertical-align: middle;
+        border-radius: 50%;
+      "
+      src="{% static 'images/avatar.png' %}"
+      alt="Avatar"
+    />
+  </div>
+  <div class="info">
+    <p class="fw-bold fs-3">{{comment.by}}</p>
+    <p>{{comment.text | safe}}</p>
+  </div>
+</div>
+<!-- <h1>{{comment.title}}</h1> -->
+<!-- <h1>{{comment.by}}</h1> -->
+{% endfor %} {% endblock content %}
