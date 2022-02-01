@@ -13,7 +13,7 @@ aiohttp==3.8.1 # https://docs.aiohttp.org/en/stable/
 
 # Django
 # ------------------------------------------------------------------------------
-django==3.2.10  # pyup: < 4.0  # https://www.djangoproject.com/
+django==4.0.2  # pyup: < 4.0  # https://www.djangoproject.com/
 django-environ==0.8.1  # https://github.com/joke2k/django-environ
 django-allauth==0.47.0  # https://github.com/pennersr/django-allauth
 django-crispy-forms==1.13.0  # https://github.com/django-crispy-forms/django-crispy-forms
