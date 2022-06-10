@@ -8,7 +8,7 @@ flower==1.0.0  # https://github.com/mher/flower
 
 # Request Library
 # ------------------------------------------------------------------------------
-requests==2.26.0 # https://github.com/psf/requests
+requests==2.28.0 # https://github.com/psf/requests
 aiohttp==3.8.1 # https://docs.aiohttp.org/en/stable/
 
 # Django
